@@ -1,0 +1,119 @@
+:root {
+  /* Colors */
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+/** Reset **/
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-size: inherit;
+}
+
+body {
+  background-color: var(--Dark-Blue);
+}
+
+/** Pages styles **/
+.loader {
+  margin-top: 1rem;
+  display: none;
+}
+
+.card {
+  margin: 12rem auto;
+  width: 343px;
+  background-color: var(--Dark-Grayish-Blue);
+  box-shadow: 3rem 5rem 8rem rgb(0 0 0 / 10%);
+  padding: 2.5rem 1.5rem 4rem;
+  text-align: center;
+  border-radius: 0.7rem;
+  position: relative;
+}
+
+.card > h1 {
+  color: var(--Neon-Green);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.card > p {
+  margin-top: 1.5rem;
+  font-size: 1.75rem;
+  color: var(--Light-Cyan);
+}
+
+.card > picture {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.card > .btn {
+  background-color: var(--Neon-Green);
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -2rem;
+  left: calc(50% - 2rem);
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 40px #53ffaa;
+  transition: 0.3s;
+}
+
+.attribution {
+  color: var(--Light-Cyan);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--Neon-Green);
+  text-decoration: none;
+}
+
+/** MediaQuerie **/
+@media (min-width: 768px) {
+  .card {
+    width: 540px;
+    padding: 3rem 2rem 4.5rem;
+  }
+
+  .card > h1 {
+    font-size: 0.8rem;
+  }
+
+  .card > p {
+    margin-top: 2rem;
+  }
+
+  .card > picture {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    margin: 13.9375rem auto 15rem auto;
+  }
+}
